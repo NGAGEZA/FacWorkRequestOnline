@@ -1,0 +1,136 @@
+/*!
+ * bootstrap-fileinput v4.5.1
+ * http://plugins.krajee.com/file-input
+ *
+ * Krajee Explorer Font Awesome 4.x theme style for bootstrap-fileinput. Load this theme file after loading
+ * font awesome 4.x CSS and `fileinput.css`.
+ *
+ * Author: Kartik Visweswaran
+ * Copyright: 2014 - 2018, Kartik Visweswaran, Krajee.com
+ *
+ * Licensed under the BSD 3-Clause
+ * https://github.com/kartik-v/bootstrap-fileinput/blob/master/LICENSE.md
+ */
+.theme-explorer-fa .file-upload-indicator, .theme-explorer-fa .file-drag-handle, .theme-explorer-fa .explorer-frame .kv-file-content, .theme-explorer-fa .file-actions, .explorer-frame .file-preview-other { text-align: center; }
+
+.theme-explorer-fa .file-thumb-progress .progress, .theme-explorer-fa .file-thumb-progress .progress-bar {
+    font-size: 11px;
+    height: 13px;
+    line-height: 13px;
+}
+
+.theme-explorer-fa .file-upload-indicator, .theme-explorer-fa .file-drag-handle {
+    display: inline-block;
+    font-size: 16px;
+    height: 16px;
+    position: absolute;
+    right: 3px;
+    top: 0;
+    width: 16px;
+}
+
+.theme-explorer-fa .file-thumb-progress .progress, .theme-explorer-fa .explorer-caption { display: block; }
+
+.theme-explorer-fa .explorer-frame td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.theme-explorer-fa .explorer-frame .kv-file-content {
+    height: 80px;
+    padding: 5px;
+    width: 80px;
+}
+
+.theme-explorer-fa .file-actions-cell {
+    padding: 0;
+    position: relative;
+    width: 120px;
+}
+
+.theme-explorer-fa .file-thumb-progress .progress { margin-top: 5px; }
+
+.theme-explorer-fa .explorer-caption { color: #777; }
+
+.theme-explorer-fa .kvsortable-ghost {
+    background: #e1edf7;
+    border: 2px solid #a1abff;
+    opacity: 0.6;
+}
+
+.theme-explorer-fa .file-preview .table { margin: 0; }
+
+.theme-explorer-fa .file-error-message ul { padding: 5px 0 0 20px; }
+
+.explorer-frame .file-preview-text {
+    border: 1px solid #ddd;
+    color: #428bca;
+    display: inline-block;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    outline: none;
+    padding: 8px;
+    resize: none;
+}
+
+.explorer-frame .file-preview-html {
+    border: 1px solid #ddd;
+    display: inline-block;
+    overflow: auto;
+    padding: 8px;
+}
+
+.explorer-frame .file-other-icon { font-size: 2.6em; }
+
+@media only screen and (max-width: 767px) {
+    .theme-explorer-fa .table, .theme-explorer-fa .table tbody, .theme-explorer-fa .table tr, .theme-explorer-fa .table td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .theme-explorer-fa .table { border: none; }
+
+    .theme-explorer-fa .table tr { margin-top: 5px; }
+
+    .theme-explorer-fa .table tr:first-child { margin-top: 0; }
+
+    .theme-explorer-fa .table td { text-align: center; }
+
+    .theme-explorer-fa .table .kv-file-content {
+        border-bottom: none;
+        margin: 0;
+        padding: 4px;
+    }
+
+    .theme-explorer-fa .table .kv-file-content .file-preview-image {
+        font-size: 20px;
+        max-width: 100%;
+    }
+
+    .theme-explorer-fa .file-details-cell {
+        border-bottom: none;
+        border-top: none;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .theme-explorer-fa .file-actions-cell {
+        border-top: none;
+        padding-bottom: 4px;
+    }
+
+    .theme-explorer-fa .explorer-frame .explorer-caption {
+        left: 0;
+        margin: auto;
+        overflow: hidden;
+        right: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/*noinspection CssOverwrittenProperties*/
+
+.file-zoom-dialog .explorer-frame .file-other-icon {
+    font-size: 22em;
+    font-size: 50vmin;
+}

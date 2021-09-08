@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WorkRequest" Class="DBFACDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.29.1.90;Initial Catalog=WorkRequest;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WorkRequestConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.vewPlace" Member="vewPlaces">
+    <Type Name="vewPlace">
+      <Column Name="PlaceNbr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewPurpose" Member="vewPurposes">
+    <Type Name="vewPurpose">
+      <Column Name="GroupCode" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Value1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Value2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewOperatorReqFlow" Member="vewOperatorReqFlows">
+    <Type Name="vewOperatorReqFlow">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="OPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PW" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityRole" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Divsion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Department1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Department2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Department3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Organiztion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmpLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewFloor" Member="vewFloors">
+    <Type Name="vewFloor">
+      <Column Name="FloorNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePlace" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NameFloor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewQuotationCnt" Member="vewQuotationCnts">
+    <Type Name="vewQuotationCnt">
+      <Column Name="FileNbr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Grp" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileAttach" Type="System.Byte[]" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FileName" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Extension" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuotationAmt" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewWorkRequestList" Member="vewWorkRequestLists">
+    <Type Name="vewWorkRequestList">
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessCode" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JobType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePlace" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FloorNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameFloor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Process" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Division" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dept" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuotationDeliveryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpectedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JobDetail" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserOPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewOperatorFac" Member="vewOperatorFacs">
+    <Type Name="vewOperatorFac">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeqID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewWorkRequest" Member="vewWorkRequests">
+    <Type Name="vewWorkRequest">
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessCode" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JobType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePlace" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FloorNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameFloor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Process" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Division" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dept" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuotationDeliveryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpectedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JobDetail" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserOPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewWorkRequestStatus" Member="vewWorkRequestStatus">
+    <Type Name="vewWorkRequestStatus">
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestDate" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QuotationAmt" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="ExpectedDellivery" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartPlan" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="FinishPlan" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Dept" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Requester" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="QuotationNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QuotationDate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PRNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PONo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PODate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InvoiceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ExpectedDate" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdDate" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="MONTHNAME" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MONTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileAttach" Member="FileAttaches">
+    <Type Name="FileAttach">
+      <Column Name="FileNbr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Grp" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileAttach" Type="System.Byte[]" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FileName" Type="System.String" DbType="NChar(40)" CanBeNull="true" />
+      <Column Name="Extension" Type="System.String" DbType="NChar(40)" CanBeNull="true" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuotationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QuotationAmt" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewOperator" Member="vewOperators">
+    <Type Name="vewOperator">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PW" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityRole" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Divsion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Department1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Department2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Department3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Organiztion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmpLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewStyle" Member="vewStyles">
+    <Type Name="vewStyle">
+      <Column Name="GrpPage" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityRole" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Action1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action9" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action10" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action11" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action12" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Action13" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Status_Text" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Status_CssClass" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Status_Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Status_ToolTip" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkStatus" Member="WorkStatus">
+    <Type Name="WorkStatus">
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRNo" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QuotationNo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="PRNoUpd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OPIDUpd" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PONo" Type="System.String" DbType="Char(25)" CanBeNull="true" />
+      <Column Name="PODate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PONoUpd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvoiceNo" Type="System.String" DbType="Char(25)" CanBeNull="true" />
+      <Column Name="InvoiceNoUpd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Item" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Specification" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemCode" Type="System.String" DbType="Char(25) NOT NULL" CanBeNull="false" />
+      <Column Name="MakerName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Unit" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vewWorkRequest_Special_1" Member="vewWorkRequest_Special_1s">
+    <Type Name="vewWorkRequest_Special_1">
+      <Column Name="WRNo" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessCode" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JobType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePlace" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FloorNbr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameFloor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Process" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Division" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dept" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuotationDeliveryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpectedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JobDetail" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserOPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sprOperatorReqFlow" Method="sprOperatorReqFlow">
+    <Parameter Name="Opid" Parameter="opid" Type="System.String" DbType="Char(6)" />
+    <ElementType Name="sprOperatorReqFlowResult">
+      <Column Name="OPID" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="SeqNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NextSeqNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprDecryptCode" Method="sprDecryptCode">
+    <Parameter Name="UIDCode" Parameter="uIDCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="sprDecryptCodeResult">
+      <Column Name="UIDCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprPREntry" Method="sprPREntry">
+    <Parameter Name="WRno" Parameter="wRno" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="OPID" Parameter="oPID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PRNo1" Parameter="pRNo1" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="PRNo2" Parameter="pRNo2" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="PRNo3" Parameter="pRNo3" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="PRNo4" Parameter="pRNo4" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="PRNo5" Parameter="pRNo5" Type="System.String" DbType="NVarChar(25)" />
+    <ElementType Name="sprPREntryResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprWorkRequestUPDPlan" Method="sprWorkRequestUPDPlan">
+    <Parameter Name="WRNo" Parameter="wRNo" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="StartPlan" Parameter="startPlan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FinishPlan" Parameter="finishPlan" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="sprWorkRequestUPDPlanResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprWorkRequestNew" Method="sprWorkRequestNew">
+    <Parameter Name="DataTrn" Parameter="dataTrn" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="JobType" Parameter="jobType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="JobName" Parameter="jobName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Place" Parameter="place" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Floor" Parameter="floor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Process" Parameter="process" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Division" Parameter="division" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Dept" Parameter="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Section" Parameter="section" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Tel" Parameter="tel" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="QuotationDeliveryDate" Parameter="quotationDeliveryDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ExpectedDate" Parameter="expectedDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="JobDetail" Parameter="jobDetail" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="UserOPID" Parameter="userOPID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="UserEMail" Parameter="userEMail" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sprWorkRequestNewResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RunningNo" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprWorkRequestUPDSurvey" Method="sprWorkRequestUPDSurvey">
+    <Parameter Name="WRNo" Parameter="wRNo" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="SurveyDate" Parameter="surveyDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SurveyRemark" Parameter="surveyRemark" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="sprWorkRequestUPDSurveyResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprWorkRequest" Method="sprWorkRequest">
+    <Parameter Name="DataTrn" Parameter="dataTrn" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="WRNo" Parameter="wRNo" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="UserOPID" Parameter="userOPID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sprWorkRequestResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummary" Method="sprChartSummary">
+    <Parameter Name="Start" Parameter="start" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="End" Parameter="end" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="sprChartSummaryResult">
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="TotalRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummaryByDept" Method="sprChartSummaryByDept">
+    <Parameter Name="Start" Parameter="start" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="End" Parameter="end" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Role" Parameter="role" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sprChartSummaryByDeptResult">
+      <Column Name="Department1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TotalRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummaryByDeptTotal" Method="sprChartSummaryByDeptTotal">
+    <Parameter Name="Start" Parameter="start" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="End" Parameter="end" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="sprChartSummaryByDeptTotalResult">
+      <Column Name="Role" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TotalRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummaryByRole" Method="sprChartSummaryByRole">
+    <Parameter Name="Start" Parameter="start" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="End" Parameter="end" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Role" Parameter="role" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sprChartSummaryByRoleResult">
+      <Column Name="MonthYear" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="TotalRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccumulateFinish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummaryByStatus" Method="sprChartSummaryByStatus">
+    <Parameter Name="Start" Parameter="start" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="End" Parameter="end" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Role" Parameter="role" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sprChartSummaryByStatusResult">
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummaryByStatusTotal" Method="sprChartSummaryByStatusTotal">
+    <Parameter Name="Start" Parameter="start" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="End" Parameter="end" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="sprChartSummaryByStatusTotalResult">
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprFileAttach" Method="sprFileAttach">
+    <Parameter Name="Grp" Parameter="grp" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="WRNo" Parameter="wRNo" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="Seq" Parameter="seq" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FileAttach" Parameter="fileAttach" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="Extension" Parameter="extension" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="SupplierName" Parameter="supplierName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="QuoDate" Parameter="quoDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Amount" Parameter="amount" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="OPID" Parameter="oPID" Type="System.String" DbType="Char(6)" />
+    <ElementType Name="sprFileAttachResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprChartSummaryByPlace" Method="sprChartSummaryByPlace">
+    <Parameter Name="Place" Parameter="place" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sprChartSummaryByPlaceResult">
+      <Column Name="Seq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprWorkRequestUPDAndDEL" Method="sprWorkRequestUPDAndDEL">
+    <Parameter Name="DataTrn" Parameter="dataTrn" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="WRNo" Parameter="wRNo" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="JobType" Parameter="jobType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="JobName" Parameter="jobName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Place" Parameter="place" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Floor" Parameter="floor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Process" Parameter="process" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Division" Parameter="division" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Dept" Parameter="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Section" Parameter="section" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Tel" Parameter="tel" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="QuotationDeliveryDate" Parameter="quotationDeliveryDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ExpectedDate" Parameter="expectedDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="JobDetail" Parameter="jobDetail" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="UserOPID" Parameter="userOPID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="UserEMail" Parameter="userEMail" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sprWorkRequestUPDAndDELResult">
+      <Column Name="Msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprWorkRequestListsFac" Method="sprWorkRequestListsFac">
+    <Parameter Name="OPID" Parameter="oPID" Type="System.String" DbType="Char(6)" />
+    <Parameter Name="Category" Parameter="category" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DataCondition" Parameter="dataCondition" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="sprWorkRequestListsFacResult">
+      <Column Name="WRNo" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NamePlace" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameFloor" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="JobDetail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Seq" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

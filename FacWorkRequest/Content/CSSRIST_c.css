@@ -1,0 +1,357 @@
+﻿body {
+    padding-top: 90px;
+  
+}
+
+
+.funkyradio div {
+    clear: both;
+    overflow: hidden;
+}
+
+.funkyradio label {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    font-weight: normal;
+}
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+    display: none;
+}
+
+    .funkyradio input[type="radio"]:empty ~ label,
+    .funkyradio input[type="checkbox"]:empty ~ label {
+        position: relative;
+        line-height: 2.5em;
+        text-indent: 3.25em;
+        margin-top: 2em;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        .funkyradio input[type="radio"]:empty ~ label:before,
+        .funkyradio input[type="checkbox"]:empty ~ label:before {
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 2.5em;
+            background: #D1D3D4;
+            border-radius: 3px 0 0 3px;
+        }
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #888;
+}
+
+    .funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+    .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+        content: '\2714';
+        text-indent: .9em;
+        color: #C2C2C2;
+    }
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: #777;
+}
+
+    .funkyradio input[type="radio"]:checked ~ label:before,
+    .funkyradio input[type="checkbox"]:checked ~ label:before {
+        content: '\2714';
+        text-indent: .9em;
+        color: #333;
+        background-color: #ccc;
+    }
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-default input[type="radio"]:checked ~ label:before,
+.funkyradio-default input[type="checkbox"]:checked ~ label:before {
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.funkyradio-success input[type="radio"]:checked ~ label:before,
+.funkyradio-success input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.funkyradio-danger input[type="radio"]:checked ~ label:before,
+.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.funkyradio-warning input[type="radio"]:checked ~ label:before,
+.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.funkyradio-info input[type="radio"]:checked ~ label:before,
+.funkyradio-info input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+/**/
+/*! U16 */
+.u16 {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    min-width: 320px
+}
+
+.u16w1 {
+    width: 140px;
+    padding: 24px 22px 24px 24px;
+    margin: 0;
+    /*background: #f80000*/
+}
+
+    .u16w1 a {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: 0 99%;
+        background-size: 100% auto;
+        width: 100%;
+        margin: 0 auto;
+        height: 18px;
+        text-indent: -2000em;
+        overflow: hidden
+    }
+
+        .u16w1 a:focus {
+            outline: 1px dotted #999;
+            outline-offset: 5px
+        }
+
+@media (min-width: 501px) and (max-width: 580px) and (min-height: 760px) {
+
+    .u16 {
+        width: 480px;
+        left: 50%;
+        margin-left: -240px;
+        margin-right: auto;
+        padding: 0
+    }
+}
+
+@media (min-width: 501px) and (max-width: 540px) and (max-height: 759px) {
+    .u16 {
+        width: 440px;
+        left: 50%;
+        margin-left: -220px;
+        margin-right: auto;
+        padding: 0
+    }
+}
+
+@media (max-height: 759px) {
+    .u16w1 {
+        width: 105px;
+        padding: 18px 15px 18px 18px;
+        margin: 0
+    }
+
+        .u16w1 a {
+            background-position: 0px 98%;
+            background-size: 99% auto;
+            height: 12px
+        }
+}
+
+@media (max-width: 500px), (max-height: 620px) {
+    .u16 {
+        text-align: center;
+        position: relative
+    }
+
+    .u16w1 {
+        width: 105px;
+        padding: 18px 15px 18px 18px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+        .u16w1 a {
+            background-position: 0px 98%;
+            background-size: 99% auto;
+            height: 12px
+        }
+}
+
+@media (min-width: 581px) {
+    .u16 {
+        width: auto;
+        padding: 0 50px
+    }
+}
+
+@media (min-width: 541px) and (max-height: 759px) {
+    .u16 {
+        width: auto;
+        padding: 0 50px
+    }
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .u16w1, .u16w1 a {
+        background-color: #fff !important;
+        text-align: center
+    }
+
+        .u16w1:before {
+            content: "ORACLE";
+            background-color: #fff !important;
+            color: #000;
+            font-size: 2.0rem
+        }
+}
+
+.u16w1 a, .cb41error:before, .cb41noteshoverbtn, .cb41w2:before, .cb41w3:before {
+    background-image: url('../Images/rohm_logo.png');
+    /*background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…0iJ0FyaWFsLUJvbGRNVCciIGZvbnQtc2l6ZT0iMzEuMjc2Ij4hPC90ZXh0PjwvZz48L3N2Zz4=);*/
+}
+
+.u16w1 a {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 0 99%;
+    background-size: 100% auto;
+    width: 100%;
+    margin: 0 auto;
+    height: 31px;
+    text-indent: -2000em;
+    overflow: hidden;
+}
+@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Roboto:400,500";
+/*home icon box*/
+.box > .icon {
+    text-align: center;
+    position: relative;
+}
+
+    .box > .icon > .image {
+        position: relative;
+        z-index: 2;
+        margin: auto;
+        width: 88px;
+        height: 88px;
+        border: 8px solid white;
+        line-height: 88px;
+        border-radius: 50%;
+        background: #d70b30;
+        vertical-align: middle;
+    }
+
+    .box > .icon:hover > .image {
+        background: #333;
+    }
+
+    .box > .icon > .image > i {
+        font-size: 36px !important;
+        color: #fff !important;
+    }
+
+    .box > .icon:hover > .image > i {
+        color: white !important;
+    }
+
+    .box > .icon > .info {
+        margin-top: -24px;
+       
+        background: rgba(220, 220, 220, 0.3);
+        border: 1px solid #e0e0e0;
+        padding: 15px 0 10px 0;
+    }
+
+    .box > .icon:hover > .info {
+        background: rgba(0, 0, 0, 0.04);
+        border-color: #e0e0e0;
+        color: white;
+    }
+
+    .box > .icon > .info > h3.title {
+        /*font-family: "Roboto",sans-serif !important;*/
+        font-size: 16px;
+        color: #222;
+        font-weight: 500;
+    }
+
+    .box > .icon > .info > p {
+        /*font-family: "Roboto",sans-serif !important;*/
+        font-size: 13px;
+        color: #444;
+        line-height: 1.5em;
+        margin: 20px;
+    }
+
+    .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a {
+        color: #222;
+    }
+
+    .box > .icon > .info > .more a {
+        /*font-family: "Roboto",sans-serif !important;*/
+        font-size: 12px;
+        color: #222;
+        line-height: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .box > .icon:hover > .info > .more > a {
+        color: #fff;
+        padding: 6px 8px;
+        background-color: #63B76C;
+    }
+
+.box .space {
+    height: 30px;
+}
+.btn-glyphicon {
+    padding: 8px;
+    background: #ffffff;
+    margin-right: 4px;
+}
+
+.icon-btn {
+    padding: 1px 15px 3px 2px;
+    border-radius: 50px;
+}
+.wellz {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, .6);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+.text-white {
+    color: white;
+}

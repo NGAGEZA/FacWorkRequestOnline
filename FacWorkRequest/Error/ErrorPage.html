@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Error Page</title>
+<style type="text/css">
+    body {
+        background-image: url('../Images/ErrorPage.png');
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        /*max-height: 700px;*/
+        overflow: hidden;
+    }
+
+    .c {
+        display: block;
+        margin: 100px auto;
+        position: relative;
+        text-align: center;
+        width: 80%;
+    }
+
+    ._404 {
+        display: inline-block;
+        font-size: 220px;
+        height: 250px;
+        letter-spacing: 15px;
+        position: relative;
+        z-index: 2;
+    }
+
+    ._1 {
+        display: block;
+        font-size: 4em;
+        letter-spacing: 12px;
+        line-height: 80%;
+        position: relative;
+        text-align: center;
+    }
+
+    ._2 {
+        display: block;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+    }
+
+    .text {
+        display: inline-block;
+        display: inline-block;
+        font-size: 70px;
+        line-height: 1.2em;
+        margin: 19px 0px 0px 0px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        /* top: 256.301px; */
+        z-index: 3;
+    }
+
+
+    .btn {
+        background-color: rgb(255, 255, 255);
+        color: #33cc99;
+        display: inline-block;
+        font-size: 25px;
+        margin: 0 auto;
+        margin-right: 10px;
+        padding: 5px;
+        position: relative;
+        text-decoration: none;
+        width: 358px;
+        z-index: 5;
+    }
+
+    .right {
+        float: right;
+        width: 60%;
+    }
+
+    hr {
+        border: none;
+        border-top: 5px solid #fff;
+        color: #fff;
+        height: 10px;
+        margin: 0px auto;
+        padding: 0;
+        text-align: center;
+        width: 420px;
+        z-index: -10;
+    }
+
+    hr:after {
+        content: "\2022";
+        display: inline-block;
+        font-size: 2em;
+        padding: 0 0.2em;
+        position: relative;
+        top: -0.75em;
+        /*background: #33cc99;*/
+    }
+
+    .cloud {
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        background: #FFF;
+        background: linear-gradient(top, #FFF 100%);
+        background: -webkit-linear-gradient(top, #FFF 100%);
+        background: -moz-linear-gradient(top, #FFF 100%);
+        background: -ms-linear-gradient(top, #FFF 100%);
+        background: -o-linear-gradient(top, #FFF 100%);
+        border-radius: 100px;
+        height: 120px;
+        margin: 120px auto 20px;
+        position: absolute;
+        transition: ease 1s;
+        width: 350px;
+        z-index: -1;
+    }
+
+    .cloud:after, .cloud:before {
+        background: #FFF;
+        content: '';
+        position: absolute;
+        z-index: -1
+    }
+
+    .cloud:after {
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
+        height: 100px;
+        left: 50px;
+        top: -50px;
+        width: 100px;
+    }
+
+    .cloud:before {
+        -moz-border-radius: 200px;
+        -webkit-border-radius: 200px;
+        border-radius: 200px;
+        height: 180px;
+        right: 50px;
+        top: -90px;
+        width: 180px;
+    }
+
+    .x1 {
+        -moz-animation: moveclouds 15s linear infinite;
+        -moz-transform: scale(0.3);
+        -o-animation: moveclouds 15s linear infinite;
+        -webkit-animation: moveclouds 15s linear infinite;
+        -webkit-transform: scale(0.3);
+        left: 100px;
+        opacity: 0.9;
+        top: -50px;
+        transform: scale(0.3);
+    }
+
+    .x1_5 {
+        -moz-animation: moveclouds 17s linear infinite;
+        -moz-transform: scale(0.3);
+        -o-animation: moveclouds 17s linear infinite;
+        -webkit-animation: moveclouds 17s linear infinite;
+        -webkit-transform: scale(0.3);
+        left: 250px;
+        top: -80px;
+        transform: scale(0.3);
+    }
+
+    .x2 {
+        -moz-animation: moveclouds 25s linear infinite;
+        -moz-transform: scale(0.6);
+        -o-animation: moveclouds 25s linear infinite;
+        -webkit-animation: moveclouds 25s linear infinite;
+        -webkit-transform: scale(0.6);
+        left: 250px;
+        opacity: 0.6;
+        top: 30px;
+        transform: scale(0.6);
+    }
+
+    .x3 {
+        -moz-animation: moveclouds 25s linear infinite;
+        -moz-transform: scale(0.6);
+        -o-animation: moveclouds 25s linear infinite;
+        -webkit-animation: moveclouds 25s linear infinite;
+        -webkit-transform: scale(0.6);
+        bottom: -70px;
+        left: 250px;
+        opacity: 0.8;
+        transform: scale(0.6);
+    }
+
+    .x4 {
+        -moz-animation: moveclouds 18s linear infinite;
+        -moz-transform: scale(0.75);
+        -o-animation: moveclouds 18s linear infinite;
+        -webkit-animation: moveclouds 18s linear infinite;
+        -webkit-transform: scale(0.75);
+        botttom: 20px;
+        left: 470px;
+        opacity: 0.75;
+        transform: scale(0.75);
+    }
+
+    .x5 {
+        -moz-animation: moveclouds 20s linear infinite;
+        -moz-transform: scale(0.5);
+        -o-animation: moveclouds 20s linear infinite;
+        -webkit-animation: moveclouds 20s linear infinite;
+        -webkit-transform: scale(0.5);
+        left: 200px;
+        opacity: 0.8;
+        top: 300px;
+        transform: scale(0.5);
+    }
+
+    @-webkit-keyframes moveclouds {
+        0% { margin-left: 1000px; }
+
+        100% { margin-left: -1000px; }
+    }
+
+    @-moz-keyframes moveclouds {
+        0% { margin-left: 1000px; }
+
+        100% { margin-left: -1000px; }
+    }
+
+    @-o-keyframes moveclouds {
+        0% { margin-left: 1000px; }
+
+        100% { margin-left: -1000px; }
+    }
+</style>
+</head>
+<body>
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x1_5"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+<div class="c">
+    <div class="_404">Error</div>
+    <hr>
+    <div class="_1">THE PAGE</div>
+    <div class="_2">IS PROBLEM PLEASE CONTACT ADMIN</div>
+    <a class="btn" href="../Menu.aspx">BACK TO MENU</a>
+</div>
+</body>
+</html>

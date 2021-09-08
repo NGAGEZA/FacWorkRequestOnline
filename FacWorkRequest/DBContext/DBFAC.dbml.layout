@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 8.5" name="DBFAC">
+  <DataContextMoniker Name="/DBFACDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e4185372-830a-450e-9f83-4a8bad2a42ec" isExpanded="false" absoluteBounds="2.75, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewPlace" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02569cdd-09ca-4e61-9162-152c535701b2" absoluteBounds="2.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2338a3c5-5a74-4ff0-9793-8b7f594c8b18" isExpanded="false" absoluteBounds="0.5, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewPurpose" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c962170-8ac6-454e-932e-b274a40cbc75" absoluteBounds="0.51499999999999968, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21f45a4e-5ed8-41ed-aad7-a24ea41e5a4c" isExpanded="false" absoluteBounds="0.5, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewOperatorReqFlow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="350caeeb-1dfb-4c1c-ac90-5ff8f22e1fea" absoluteBounds="0.51499999999999968, 2.585, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4810fc46-dcaf-47f3-9c09-94db910fd96c" isExpanded="false" absoluteBounds="0.5, 3, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewFloor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cc6790e-1283-42e9-9920-e3768f2dcf42" absoluteBounds="0.51499999999999968, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2332cb40-d863-49b1-b1d3-0a8b3d9fce2e" isExpanded="false" absoluteBounds="5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewQuotationCnt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09c45fe9-a90f-42b5-b792-462e1547532f" absoluteBounds="5.015, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23582cac-7ea6-47c9-b702-7f7b80d65c20" isExpanded="false" absoluteBounds="2.75, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewWorkRequestList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70598d73-0a77-4dca-8dfc-000d81ef4082" absoluteBounds="2.7649999999999997, 2.71, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c95061e6-44e8-49db-bdb7-761d3f76547a" isExpanded="false" absoluteBounds="5.25, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewOperatorFac" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1af20562-694e-4643-a226-dc680a48620b" absoluteBounds="5.265, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b61708c5-00b3-4da2-bee0-de9a36185e95" isExpanded="false" absoluteBounds="7.625, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewWorkRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63a2d22f-8877-4f64-b9e4-de5ef025fe3c" absoluteBounds="7.6400000000000006, 0.96, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e2dfe5a-0670-429e-9ddb-9246e65e9f6d" isExpanded="false" absoluteBounds="5, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewWorkRequestStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00f7d5ab-c057-40c1-b286-4d3f2abbedc9" absoluteBounds="5.015, 1.96, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f63bfad7-530b-41b6-924b-523a5d3e60e2" isExpanded="false" absoluteBounds="8, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/FileAttach" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e8efc47-5902-4303-86a7-1ae1ffede1e8" absoluteBounds="8.015, 1.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e187dc24-30e0-4872-8120-1b1c5a7d7002" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewOperator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b37969dd-1233-440f-bbe6-cb3e7eaebe72" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="466b5d12-3335-46bc-b24d-9bfbd4deed05" isExpanded="false" absoluteBounds="3.25, 3.125, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewStyle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84996bb2-3e63-4c0e-af2f-5fc9acf93ca5" absoluteBounds="3.2649999999999997, 3.585, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d75a670-f1b6-4356-b597-797385e3b86b" isExpanded="false" absoluteBounds="5.375, 4.625, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/WorkStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55e0de2d-2db7-4b0e-8ba9-f7c0028bcc73" absoluteBounds="5.3900000000000006, 5.085, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a59062bd-e408-4e31-8bb4-c854783cc25f" isExpanded="false" absoluteBounds="9.75, 4.375, 2, 0.45">
+      <DataClassMoniker Name="/DBFACDataContext/vewWorkRequest_Special_1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="444ec521-6e7e-4471-b85c-c36b5498e843" absoluteBounds="9.765, 4.835, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

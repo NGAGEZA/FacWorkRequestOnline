@@ -1,0 +1,210 @@
+﻿@-webkit-keyframes HeroBG {
+    0% { background-position: 0 0; }
+
+    50% { background-position: 100% 0; }
+
+    100% { background-position: 0 0; }
+}
+
+@keyframes HeroBG {
+    0% { background-position: 0 0; }
+
+    50% { background-position: 100% 0; }
+
+    100% { background-position: 0 0; }
+}
+
+
+.panel { border-radius: 5px; }
+
+label { font-weight: 300; }
+
+.panel-login {
+    -moz-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+    -webkit-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+    border: none;
+    box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+}
+
+.panel-login .checkbox input[type=checkbox] { margin-left: 0px; }
+
+.panel-login .checkbox label {
+    display: inline-block;
+    font-weight: 300;
+    padding-left: 25px;
+    position: relative;
+}
+
+.panel-login .checkbox { padding-left: 20px; }
+
+.panel-login .checkbox label::before {
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    left: 0;
+    margin-left: 0px;
+    position: absolute;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    width: 17px;
+}
+
+.panel-login .checkbox label::after {
+    color: #555555;
+    display: inline-block;
+    font-size: 11px;
+    height: 16px;
+    left: 0;
+    margin-left: 0px;
+    padding-left: 3px;
+    padding-top: 1px;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+
+.panel-login .checkbox input[type="checkbox"] { opacity: 0; }
+
+.panel-login .checkbox input[type="checkbox"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.panel-login .checkbox input[type="checkbox"]:checked + label::after {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+}
+
+.panel-login > .panel-heading .tabs { padding: 0; }
+
+.panel-login h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 30px;
+}
+
+.panel-login > .panel-heading {
+    background-color: #e8e9ec;
+    border-bottom: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color: #fff;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color: #848c9d;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.panel-login .form-group { padding: 0 30px; }
+
+.panel-login > .panel-heading .login {
+    border-bottom-leftt-radius: 5px;
+    padding: 20px 30px;
+}
+
+.panel-login > .panel-heading .register {
+    background: #2d3b55;
+    border-bottom-right-radius: 5px;
+    padding: 20px 30px;
+}
+
+.panel-login > .panel-heading a {
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.panel-login > .panel-heading a#register-form-link {
+    color: #fff;
+    text-align: right;
+    width: 100%;
+}
+
+.panel-login > .panel-heading a#login-form-link {
+    text-align: left;
+    width: 100%;
+}
+
+.panel-login input[type="text"], .panel-login input[type="email"], .panel-login input[type="password"] {
+    -moz-transition: all 0.1s linear;
+    -webkit-box-shadow: none;
+    -webkit-transition: all 0.1s linear;
+    border: 0;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 16px;
+    height: 45px;
+    padding: 6px 0px;
+    transition: all 0.1s linear;
+}
+
+.panel-login input:hover,
+.panel-login input:focus {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #ccc;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-login {
+    background-color: #E8E9EC;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #2D3B55;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    outline: none;
+    padding: 14px 0;
+    text-transform: uppercase;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    background-color: #2D3B55;
+    color: #fff;
+}
+
+.forgot-password {
+    color: #888;
+    text-decoration: underline;
+}
+
+.forgot-password:hover,
+.forgot-password:focus {
+    color: #666;
+    text-decoration: underline;
+}
+
+.btn-register {
+    background-color: #E8E9EC;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #2D3B55;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    outline: none;
+    padding: 14px 0;
+    text-transform: uppercase;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+    background-color: #2D3B55;
+    color: #fff;
+}
